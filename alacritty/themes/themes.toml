@@ -1,0 +1,37 @@
+# Meu tema Customizado
+
+# Janela
+[window]
+opacity = 0.7
+
+# Cores do fundo e plano principal
+[colors.primary]
+background = "#282726"
+foreground = "#FFFCF0"
+
+# Cores do cursor
+[colors.cursor]
+text = "#000000"
+cursor = "#8b59ff"
+
+# Cores normais
+[colors.normal]
+black = "#181818"
+red = "#FF0000"
+green = "#98C379"
+yellow = "#FFFC00"
+blue = "#8b59ff"
+magenta = "#C678DD"
+cyan = "#56B6C2"
+white = "#EBDBB2"
+
+# Cores brilhantes
+[colors.bright]
+black = "#555555"
+red = "#FF5555"
+green = "#B5E890"
+yellow = "#FFFA75"
+blue = "#A98BFF"
+magenta = "#E0A8F0"
+cyan = "#7FDBE8"
+white = "#FFFFFF"

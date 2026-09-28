@@ -1,0 +1,54 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[greetings]
+color=#8b59ff
+command=echo "Eai, $USER!"
+interval=once
+
+[volume]
+command=~/.config/i3blocks/scripts/volume/volume
+LABEL=󰕾 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
+[cpu_usage]
+command=~/.config/i3blocks/scripts/cpu_usage/cpu_usage
+interval=10
+LABEL=󰻠 
+#min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+COLOR_NORMAL=#EBDBB2
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+[memory]
+command=~/.config/i3blocks/scripts/memory/memory
+label=
+interval=30
+
+[battery]
+command=~/.config/i3blocks/scripts/battery/battery
+interval=30
+LABEL=BAT
+LABEL=󱊣
+BAT_NUMBER=0
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+LABEL=
