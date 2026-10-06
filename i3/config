@@ -207,8 +207,8 @@ bar {
 }	
 
 
-# Configurando papel de parede Gurren Lagan (Utilizando pacote feh)
-exec --no-startup-id feh --bg-fill /home/fan/Imagens/Wallpaper/Who\ the\ hell\ do\ you\ think\ i\ am?ASCII.jpeg
+# Configurando papel de parede p/ cada workspace a partir de script py
+exec --no-startup-id python3 /home/fan/Documentos/dotfiles/i3/switch_workspaces.py
 
 # Configurando compositor de janela picom
 exec --no-startup-id picom --config /home/fan/.config/picom/picom.conf -b
