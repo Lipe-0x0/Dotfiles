@@ -1,1 +1,4 @@
 i3blocks/scripts/
+i3/.venv/
+i3/__pycache__/
+*.pyc
