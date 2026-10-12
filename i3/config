@@ -208,7 +208,7 @@ bar {
 
 
 # Configurando papel de parede p/ cada workspace a partir de script py
-exec --no-startup-id /home/fan/Documentos/dotfiles/i3/switch_workspaces.py
+exec --no-startup-id /home/fan/Documentos/dotfiles/i3/.venv/bin/python /home/fan/Documentos/dotfiles/i3/switch_workspaces.py
 
 # Configurando compositor de janela picom
 exec --no-startup-id picom --config /home/fan/.config/picom/picom.conf -b
