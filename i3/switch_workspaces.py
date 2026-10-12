@@ -1,25 +1,44 @@
 import subprocess # Chamar comandos externos do shell
 from i3ipc import Connection, Event # Conexão com i3wm e Manipulador de Eventos
+import logging # Verificação de erro no log.txt
+import time
 
-i3 = Connection() 
+WP_PAR = "/home/fan/Imagens/Wallpaper/WP_PAR/"
+WP_IMPAR = "/home/fan/Imagens/Wallpaper/WP_IMPAR/"
 
-# Altera workspace
-def switch(number):
-    if (int(number) % 2) == 0:
-        subprocess.run(["feh", "--bg-fill", "/home/fan/Imagens/Wallpaper/a_cartoon_of_a_man_flying_through_the_airASCII.jpeg"])
-    else:
-        subprocess.run(["feh", "--bg-fill", "/home/fan/Imagens/Wallpaper/Who the hell do you think i am?ASCII.jpeg"])
+WP_REAL = ""
 
-# Pega a area de trabalho focada/atual
-number_ws = i3.get_tree().find_focused().workspace().name
-# Aplica a função de troca com subprocess
-switch(number_ws)
+# Configuração do log
+logging.basicConfig(filename = "/home/fan/Documentos/dotfiles/i3/log.txt", level = logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filemode = "a")
+
+# Verifica paridade e envia comando para o shell
+def apply(num):
+    global WP_REAL
+
+    if (int(num) % 2) == 0:
+        WP_REAL = WP_PAR
+    else: WP_REAL = WP_IMPAR
+
+    logging.info(WP_REAL) # Informa qual wallpaper subiu
+
+    subprocess.run(["feh", "--bg-fill", "--randomize", WP_REAL])
 
 
-# Registra o evento chamado
-def on_workspace_focus(i3, e):
-    switch(e.current.name)
+# Recebendo chamada do evento(alteração de workspace) e passando para a função apply
+def on_workspace_focus(i3, event):
+    apply(event.current.num)
 
-i3.on(Event.WORKSPACE_FOCUS, on_workspace_focus)
+def run():
+    i3 = Connection()
+    focused = [w for w in i3.get_workspaces() if w.focused] # de todos workspaces ativos ele pega o que estiver focado
+    apply(focused[0].num if focused else None) # se focused existir(for diferente de None) então rodar apply
+    i3.on("workspace::focus", on_workspace_focus)
+    i3.main()
 
-i3.main()
+while True:
+    try:
+        run()
+    except Exception as erro:
+        logging.exception(erro)
+    time.sleep(1)
+
