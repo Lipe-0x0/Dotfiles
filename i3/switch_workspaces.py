@@ -3,8 +3,8 @@ from i3ipc import Connection, Event # Conexão com i3wm e Manipulador de Eventos
 import logging # Verificação de erro no log.txt
 import time
 
-WP_PAR = "/home/fan/Imagens/Wallpaper/WP_PAR/"
-WP_IMPAR = "/home/fan/Imagens/Wallpaper/WP_IMPAR/"
+WP_PAR = "/home/fan/Imagens/Wallpaper/WP_PAR/a_woman_standing_in_front_of_a_window.jpg"
+WP_IMPAR = "/home/fan/Imagens/Wallpaper/WP_IMPAR/a_cartoon_of_a_monster.png"
 
 WP_REAL = ""
 
@@ -21,7 +21,7 @@ def apply(num):
 
     logging.info(WP_REAL) # Informa qual wallpaper subiu
 
-    subprocess.run(["feh", "--bg-fill", "--randomize", WP_REAL])
+    subprocess.run(["feh", "--bg-fill", WP_REAL])
 
 
 # Recebendo chamada do evento(alteração de workspace) e passando para a função apply
