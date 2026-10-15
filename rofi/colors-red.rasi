@@ -1,4 +1,5 @@
 * {
+    font: "JetBrainsMono Nerd Font Mono 10";
     selected-normal-foreground:  rgba ( 24, 24, 24, 100 % );
     foreground:                  rgba ( 235, 219, 178, 100 % );
     normal-foreground:           @foreground;
@@ -6,9 +7,9 @@
     red:                         rgba ( 255, 0, 0, 100 % );
     selected-urgent-foreground:  rgba ( 255, 255, 255, 100 % );
     blue:                        rgba ( 139, 89, 255, 100 % );
-    urgent-foreground:           rgba ( 255, 0, 0, 100 % );
+    urgent-foreground:           rgba ( 139, 89, 255, 100 % );
     alternate-urgent-background: rgba ( 24, 24, 24, 18 % );
-    active-foreground:           rgba ( 139, 89, 255, 100 % );
+    active-foreground:           rgba ( 255, 0, 0, 100 % );
     lightbg:                     rgba ( 235, 219, 178, 100 % );
     selected-active-foreground:  rgba ( 24, 24, 24, 100 % );
     alternate-active-background: rgba ( 24, 24, 24, 18 % );
@@ -17,12 +18,15 @@
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 24, 24, 24, 63 % );
     lightfg:                     rgba ( 235, 219, 178, 100 % );
-    selected-normal-background:  rgba ( 139, 89, 255, 40 % );
-    separatorcolor:              rgba ( 255, 0, 0, 18 % );
+    selected-normal-background:  rgba ( 255, 0, 0, 40 % );
+    border-color:                @foreground;
+    spacing:                     2;
+    separatorcolor:              rgba ( 139, 89, 255, 18 % );
     urgent-background:           rgba ( 24, 24, 24, 15 % );
-    selected-urgent-background:  rgba ( 255, 0, 0, 40 % );
+    selected-urgent-background:  rgba ( 139, 89, 255, 40 % );
     alternate-urgent-foreground: @urgent-foreground;
+    background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 24, 24, 24, 15 % );
-    selected-active-background:  rgba ( 139, 89, 255, 40 % );
+    selected-active-background:  rgba ( 255, 0, 0, 40 % );
 }

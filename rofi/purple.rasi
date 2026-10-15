@@ -3,6 +3,8 @@
  * User: Rasi
  * Copyright: Rasmus Steinke
  ******************************************************************************/
+
+// COLORS-START
 * {
     font: "JetBrainsMono Nerd Font Mono 10";
     selected-normal-foreground:  rgba ( 24, 24, 24, 100 % );
@@ -35,6 +37,8 @@
     active-background:           rgba ( 24, 24, 24, 15 % );
     selected-active-background:  rgba ( 139, 89, 255, 40 % );
 }
+// COLORS-END
+
 window {
     background-color: @background;
     border:           1;

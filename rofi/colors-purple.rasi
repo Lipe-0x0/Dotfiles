@@ -1,4 +1,5 @@
 * {
+    font: "JetBrainsMono Nerd Font Mono 10";
     selected-normal-foreground:  rgba ( 24, 24, 24, 100 % );
     foreground:                  rgba ( 235, 219, 178, 100 % );
     normal-foreground:           @foreground;
@@ -18,10 +19,13 @@
     normal-background:           rgba ( 24, 24, 24, 63 % );
     lightfg:                     rgba ( 235, 219, 178, 100 % );
     selected-normal-background:  rgba ( 139, 89, 255, 40 % );
+    border-color:                @foreground;
+    spacing:                     2;
     separatorcolor:              rgba ( 255, 0, 0, 18 % );
     urgent-background:           rgba ( 24, 24, 24, 15 % );
     selected-urgent-background:  rgba ( 255, 0, 0, 40 % );
     alternate-urgent-foreground: @urgent-foreground;
+    background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 24, 24, 24, 15 % );
     selected-active-background:  rgba ( 139, 89, 255, 40 % );
