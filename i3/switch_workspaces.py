@@ -1,7 +1,10 @@
 import subprocess # Chamar comandos externos do shell
 from i3ipc import Connection, Event # Conexão com i3wm e Manipulador de Eventos
-import logging # Verificação de erro no log.txt
+import logging # Verificação de info/erro/warning e inserção em arquivo log.txt
 import time
+
+rofi_purple = "/home/fan/Documentos/dotfiles/rofi/colors-purple.rasi"
+rofi_red = "/home/fan/Documentos/dotfiles/rofi/colors-red.rasi"
 
 WP_IMPAR = "/home/fan/Imagens/Wallpaper/WP_PAR/a_woman_standing_in_front_of_a_window.jpg"
 WP_PAR = "/home/fan/Imagens/Wallpaper/WP_IMPAR/a_cartoon_of_a_monster.png"
